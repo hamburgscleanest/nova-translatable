@@ -1,6 +1,6 @@
 <?php
 
-namespace WebId\Translatable;
+namespace hamburgscleanest\Translatable;
 
 use Laravel\Nova\Fields\Field;
 
