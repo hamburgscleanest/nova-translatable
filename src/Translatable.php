@@ -6,6 +6,7 @@ use Laravel\Nova\Fields\Field;
 
 class Translatable extends Field
 {
+
     /**
      * The field's component.
      *
@@ -16,21 +17,22 @@ class Translatable extends Field
     /**
      * Create a new field.
      *
-     * @param  string  $name
-     * @param  string|null  $attribute
-     * @param  mixed|null  $resolveCallback
+     * @param string $name
+     * @param string|null $attribute
+     * @param mixed|null $resolveCallback
      * @return void
      */
     public function __construct($name, $attribute = null, $resolveCallback = null)
     {
         parent::__construct($name, $attribute, $resolveCallback);
 
-        $locales = array_map(function ($value) {
+        $locales = \array_map(function($value)
+        {
             return __($value);
-        }, config('translatable.locales'));
+        }, \config('translatable.locales'));
 
         $this->withMeta([
-            'locales' => $locales,
+            'locales'     => $locales,
             'indexLocale' => app()->getLocale()
         ]);
     }
@@ -38,22 +40,24 @@ class Translatable extends Field
     /**
      * Resolve the given attribute from the given resource.
      *
-     * @param  mixed  $resource
-     * @param  string  $attribute
+     * @param mixed $resource
+     * @param string $attribute
      * @return mixed
      */
     protected function resolveAttribute($resource, $attribute)
     {
-        if (method_exists($resource, 'getTranslations')) {
+        if (\method_exists($resource, 'getTranslations'))
+        {
             return $resource->getTranslations($attribute);
         }
-        return data_get($resource, $attribute);
+
+        return \data_get($resource, $attribute);
     }
 
     /**
      * Set the locales to display / edit.
      *
-     * @param  array  $locales
+     * @param array $locales
      * @return $this
      */
     public function locales(array $locales)
@@ -64,7 +68,7 @@ class Translatable extends Field
     /**
      * Set the locale to display on index.
      *
-     * @param  string $locale
+     * @param string $locale
      * @return $this
      */
     public function indexLocale($locale)
