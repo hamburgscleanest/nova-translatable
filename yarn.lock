@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@tinymce/tinymce-vue@^1.1.0":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-vue/-/tinymce-vue-1.1.2.tgz#78322742d268b67ad4da5544ad03cd9b7cb30326"
-  integrity sha512-nknWxb5gQv8lYXtJ7S/T8f/S15iUVcIKZfBWPRtvihv7GVrPZu3lDeNfvpdgR5VHG8YZakdhVhg/zvaT5XzPNQ==
+"@tinymce/tinymce-vue@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@tinymce/tinymce-vue/-/tinymce-vue-2.1.0.tgz#cac3e935b217a277424f2258f3235824aa3c17c0"
+  integrity sha512-lDIpeLbkaobS/f00wWaOhGJdiZLdtL0dEDYB4JvqgVeAAoaDFG2PvXXP/kN49xpHpUe8vOdt7xFaN48nrPmsbQ==
   dependencies:
     vue "^2.5.17"
 
