@@ -16,7 +16,7 @@
     },
     "dependencies": {
         "@tinymce/tinymce-vue": "^3.0.1",
-        "vue": "^2.6.11",
+        "vue": "^2.6.14",
         "trix": "^1.2.2"
     }
 }
